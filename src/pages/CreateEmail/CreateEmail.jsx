@@ -1,12 +1,17 @@
 import React, { useState, useRef } from 'react';
 import './styles.css';
 import axios from 'axios';
+import BuildIcon from '@mui/icons-material/Build';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import Lottie from 'react-lottie-player';
+import loadingAnimation from '../../assets/loading.json';
 
 export default function CreateEmail() {
     const [emailBody, setEmailBody] = useState('');
     const [renderedHtml, setRenderedHtml] = useState('');
     const [emailTitle, setEmailTitle] = useState('');
     const [emailGenerated, setEmailGenerated] = useState(false);
+    const [showLoading, setShowLoading] = useState(false);
     const renderedHtmlRef = useRef(null);
     let token;
 
@@ -15,12 +20,15 @@ export default function CreateEmail() {
     };
 
     const generateHTML = async () => {
+        // Show the loading animation
+        setShowLoading(true);
         await axios.post(`${process.env.REACT_APP_API_URL}/newToken`, {
             emailTitle,
             emailBody
         })
             .then(response => {
                 token = response.data;
+                setShowLoading(false);
             })
             .catch(error => {
                 console.log(error);
@@ -63,15 +71,19 @@ export default function CreateEmail() {
                     cols="50"
                 ></textarea>
                 <br />
-                <button type="button" onClick={generateHTML}>
-                    Generate
-                </button>
+                <div className='button' type="button" onClick={generateHTML}>
+                    <BuildIcon style={{ height: 17 }} />Generate
+                </div>
             </form>
+            {
+                showLoading && <div><Lottie className='loading-animation' play animationData={loadingAnimation} /></div>
+            }
             {
                 emailGenerated &&
                 <div className='generated-email'>
                     <div>
                         <p className='generated-email-title'>Your generated email:</p>
+                        <div className='button' onClick={clickToCopy}><ContentCopyIcon style={{ height: 17 }} />Click to copy</div>
                         <div className='generated-email-container'>
                             <div ref={renderedHtmlRef} id="renderedHtmlContainer">
                                 {/* Rendered HTML will be inserted here */}
@@ -79,7 +91,6 @@ export default function CreateEmail() {
                             </div>
                         </div>
                     </div>
-                    <button onClick={clickToCopy}>Copy email</button>
                 </div>
             }
         </div>

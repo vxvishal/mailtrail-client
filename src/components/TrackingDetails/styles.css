@@ -10,7 +10,7 @@ th {
 
 td {
     border: 1px solid black;
-    text-align: left;
+    text-align: center;
 }
 
 .lottie {
@@ -37,14 +37,22 @@ td {
     cursor: pointer;
     font-size: 1rem;
     width: 70px;
-    border: 1px solid black;
+    border: 2px dashed black;
     display: flex;
     align-items: center;
     margin-top: 10px;
+    padding: 6px;
+}
+
+.close-button:hover {
+    background-color: black;
+    color: white;
+    transition: 0.2s;
 }
 
 .column-title {
     font-size: 1.3rem;
+    text-align: center;
 }
 
 .table-body {

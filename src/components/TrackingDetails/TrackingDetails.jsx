@@ -27,7 +27,7 @@ function TrackingDetails({ data, onClose }) {
             {
                 showLoading ? (<div className='lottie'><Lottie className='animation' play animationData={loadingAnimation} /></div>) :
                     <div className='details'>
-                        <div className='close-button' onClick={onClose}><ArrowBackIosNewIcon />Back</div>
+                        <div className='close-button' onClick={onClose}><ArrowBackIosNewIcon style={{ height: 17 }} />Back</div>
                         <div className='details-header'>
                             <h4>{data.emailTitle}</h4>
                             <p>Created on: {data.createdAt}</p>

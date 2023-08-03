@@ -21,7 +21,7 @@
 .user-input-wrp {
     position: relative;
     width: 30%;
-    margin-bottom: 30px;
+    margin: 10px 0 30px 0;
 }
 
 .user-input-wrp .inputText {
@@ -33,7 +33,7 @@
 }
 
 .user-input-wrp .inputText:focus {
-    border-color: blue;
+    border-color: black;
     border-width: medium medium 2px;
 }
 
@@ -41,7 +41,6 @@
     position: absolute;
     pointer-events: none;
     top: 30px;
-    /* left: 0px; */
     transition: 0.2s ease all;
     font-size: 16px;
 }
@@ -49,7 +48,6 @@
 .user-input-wrp input:focus~.floating-label,
 .user-input-wrp input:not(:focus):valid~.floating-label {
     top: 15px;
-    /* left: 0px; */
     font-size: 13px;
     opacity: 1;
 }
@@ -66,4 +64,28 @@
 .generated-email-container {
     border: 1px dashed black;
     width: 40%;
+    margin-bottom: 8px;
+}
+
+.button {
+    cursor: pointer;
+    font-size: 1rem;
+    border: 2px dashed black;
+    width: fit-content;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.button:hover {
+    background-color: black;
+    color: white;
+    transition: 0.2s;
+}
+
+.loading-animation {
+    width: 300px;
+    height: 300px;
+    display: flex;
 }

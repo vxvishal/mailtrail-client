@@ -2,6 +2,7 @@ import "./App.css";
 import CreateEmail from "./pages/CreateEmail/CreateEmail";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import SidebarNav from "./pages/SidebarNav/SidebarNav";
+import Error404 from "./pages/Error404/Error404";
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 export default function App() {
@@ -10,6 +11,7 @@ export default function App() {
     [
       {
         element: <SidebarNav />,
+        errorElement: <Error404 />,
         children: [
           {
             path: '/',
@@ -20,7 +22,7 @@ export default function App() {
             element: <CreateEmail />
           }
         ]
-      }
+      },
     ]
   );
 
