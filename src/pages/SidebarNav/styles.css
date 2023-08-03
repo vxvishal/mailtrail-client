@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    font-family: monospace;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100vh;
+    background: #ffffff;
+    font-size: 24px;
+}
+
+.app {
+    color: white;
+}
+
+.menu1 {
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.menu-item {
+    text-decoration: none;
+    color: white;
+}
+
+.mailtrail {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}

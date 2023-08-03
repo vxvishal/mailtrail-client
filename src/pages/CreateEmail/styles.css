@@ -1,0 +1,69 @@
+.create-email-main {
+    overflow: scroll;
+    height: 100vh;
+    width: 100%;
+    padding-left: 10px;
+}
+
+.create-email-main::-webkit-scrollbar {
+    display: none;
+}
+
+.email-title-input {
+    height: 100px;
+}
+
+#renderedHtmlContainer {
+    font-family: Arial !important;
+    font-size: 14px !important;
+}
+
+.user-input-wrp {
+    position: relative;
+    width: 30%;
+    margin-bottom: 30px;
+}
+
+.user-input-wrp .inputText {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #777;
+    box-shadow: none !important;
+}
+
+.user-input-wrp .inputText:focus {
+    border-color: blue;
+    border-width: medium medium 2px;
+}
+
+.user-input-wrp .floating-label {
+    position: absolute;
+    pointer-events: none;
+    top: 30px;
+    /* left: 0px; */
+    transition: 0.2s ease all;
+    font-size: 16px;
+}
+
+.user-input-wrp input:focus~.floating-label,
+.user-input-wrp input:not(:focus):valid~.floating-label {
+    top: 15px;
+    /* left: 0px; */
+    font-size: 13px;
+    opacity: 1;
+}
+
+.generated-email {
+    margin-bottom: 30px;
+}
+
+.generated-email-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.generated-email-container {
+    border: 1px dashed black;
+    width: 40%;
+}

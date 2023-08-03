@@ -1,0 +1,24 @@
+.main {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100vh;
+    margin-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.main::-webkit-scrollbar {
+    display: none;
+}
+
+.list {
+    border: 1px dashed black;
+    margin: 10px;
+    height: fit-content;
+    width: 400px;
+}
+
+.list:hover {
+    cursor: pointer;
+}

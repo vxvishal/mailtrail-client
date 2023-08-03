@@ -1,0 +1,14 @@
+.item-title {
+    font-size: 24px;
+    overflow: hidden;
+    margin: 10px;
+    /* width: 100px; */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* word-wrap: break-word; */
+}
+
+.item-time {
+    font-size: 20px;
+    margin: 10px;
+}
