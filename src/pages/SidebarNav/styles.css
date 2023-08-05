@@ -9,6 +9,7 @@ body {
 
 .app {
     color: white;
+    /* height: 100vw; */
 }
 
 .menu1 {
@@ -27,5 +28,10 @@ body {
 .mailtrail {
     color: white;
     text-decoration: none;
+    text-align: center;
+}
+
+.last {
+    margin-top: 335px;
     text-align: center;
 }

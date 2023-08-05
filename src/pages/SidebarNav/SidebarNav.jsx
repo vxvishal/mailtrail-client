@@ -38,6 +38,7 @@ export default function SidebarNav() {
                         </Link>
                         {/* <MenuItem icon={<LogoutIcon />}> Logout </MenuItem>  */}
                     </Menu>
+                    <div className='last'><h6>v1.0</h6></div>
                 </Sidebar>
             </div>
             <Outlet />
