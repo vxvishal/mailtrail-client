@@ -57,6 +57,7 @@ export default function CreateEmail() {
 
     return (
         <div className='create-email-main'>
+            <h6>Add a title, email body and click generate. Copy the tracking enabled email and send it from your email address.</h6>
             <div class="user-input-wrp">
                 <br />
                 <input type="text" class="inputText" required onChange={(e) => { setEmailTitle(e.target.value) }} />
