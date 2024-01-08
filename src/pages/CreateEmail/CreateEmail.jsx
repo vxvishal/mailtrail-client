@@ -37,7 +37,7 @@ export default function CreateEmail() {
         // Generate the HTML code with the tracking pixel
         const trackingPixelUrl = `${process.env.REACT_APP_API_URL}?token=${token}`;
         // const htmlWithPixel = `<p>${emailBody}</p><img src="${trackingPixelUrl}" alt="tracking-pixel">`;
-        const htmlWithPixel = `<p>${emailBody.replace(/\n{2,}/g, '</p><p>').replace(/\n/g, '<br>')}<img src="${trackingPixelUrl}" alt="tracking-pixel"></p>`;
+        const htmlWithPixel = `<p>${emailBody.replace(/\n{2,}/g, '</p><p>').replace(/\n/g, '<br>')}<img src="${trackingPixelUrl}" alt="tp"></p>`;
         // Update the rendered HTML state
         setRenderedHtml(htmlWithPixel);
         setEmailGenerated(true);
